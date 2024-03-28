@@ -1,0 +1,31 @@
+@import "src/assets/styles/_variables";
+
+.button {
+  background: $yellow;
+  border: none;
+  border-radius: 21px;
+  height: 3rem;
+  width: 10rem;
+  text-align: center;
+  padding: 5px;
+  color: $default;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: $default;
+  border: 1px solid $default;
+}
+
+.buttonActive {
+  border: none;
+  border-radius: 21px;
+  border: 1px solid $default;
+  height: calc(var(--index) * 2);
+  width: calc(var(--index) * 10);
+  text-align: center;
+  background-color: transparent;
+  color: $default;
+  cursor: pointer;
+}
