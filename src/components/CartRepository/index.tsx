@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 import favoriteStore from "@store/favoriteStore";
 import { toJS } from "mobx";
+import gitStore from "@store/gitStore";
+import Avatar from "@components/UI/Avatar";
 
 interface CartRepositoryProps {
   rep: Repository;
@@ -13,9 +15,11 @@ interface CartRepositoryProps {
 
 const CartRepository: FC<CartRepositoryProps> = ({ rep }) => {
   const { addFavoriteRep } = favoriteStore;
+  const { setAcriveRep } = gitStore;
   const navigate = useNavigate();
 
   const showMore = () => {
+    setAcriveRep(toJS(rep));
     navigate(AppRoutes.details);
   };
 
@@ -26,7 +30,7 @@ const CartRepository: FC<CartRepositoryProps> = ({ rep }) => {
   return (
     <li className={style.cart} onClick={addFavorite}>
       <div className={style.wrapper}>
-        <img src={rep.owner.avatar_url} alt={rep.name} className={style.logo} />
+        <Avatar href={rep.owner.avatar_url} title={rep.name} />
 
         <div className={style.wrapperInfo}>
           <span>

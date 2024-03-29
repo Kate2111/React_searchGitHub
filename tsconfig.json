@@ -31,7 +31,8 @@
       "@pages": ["src/pages/*"],
       "@router": ["src/router/*"],
       "@store": ["src/store/*"],
-      "@type": ["src/type/*"]
+      "@type": ["src/type/*"],
+      "@utils": ["src/utils/*"]
     }
   },
   "include": ["src"],

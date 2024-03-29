@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import classes from "./MyButton.module.scss";
+import classes from "./index.module.scss";
 
 interface MyButtonProps {
   children: ReactNode;

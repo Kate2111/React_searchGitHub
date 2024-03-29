@@ -1,5 +1,5 @@
 import { ChangeEvent, FC } from "react";
-import style from "./MyInput.module.scss";
+import style from "./index.module.scss";
 
 interface MyInputProps {
   value: string;

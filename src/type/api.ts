@@ -14,6 +14,10 @@ export interface Repository {
   stargazers_count: number;
   forks_count: number;
   owner: Owner;
+  svn_url: string;
+  updated_at: string;
+  created_at: string;
+  language: string;
 }
 
 interface Owner {

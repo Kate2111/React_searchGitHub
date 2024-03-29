@@ -9,8 +9,13 @@ class Favorite {
   }
 
   addFavoriteRep = (rep: Repository) => {
-    console.log(rep);
-    this.favorite.push(rep);
+    const isExist = this.favorite.some(
+      (favoriteRep) => favoriteRep.id === rep.id
+    );
+
+    if (!isExist) {
+      this.favorite.push(rep);
+    }
   };
 }
 

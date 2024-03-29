@@ -4,11 +4,16 @@ import { makeAutoObservable, runInAction } from "mobx";
 
 class GitStore {
   repositories: Repository[] = [];
+  activeRepository: Repository | null = null;
   isLoading: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
   }
+
+  setAcriveRep = (rep: Repository) => {
+    this.activeRepository = rep;
+  };
 
   fetchReps = async (searchQuery: string) => {
     try {
