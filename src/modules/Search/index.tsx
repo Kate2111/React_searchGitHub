@@ -3,6 +3,7 @@ import { FC, useEffect, useState } from "react";
 import style from "./index.module.scss";
 import { useDebounce } from "@hooks/useDebaunse";
 import gitStore from "@store/gitStore";
+import CopyToClipboard from "@components/CopyToClipboard";
 
 const Search: FC = () => {
   const { fetchReps } = gitStore;
@@ -23,6 +24,7 @@ const Search: FC = () => {
           setValue(e.target.value);
         }}
       />
+      <CopyToClipboard text={debouncedSearchTerm} />
     </div>
   );
 };
