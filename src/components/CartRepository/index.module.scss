@@ -28,3 +28,14 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+@media (max-width: 950px) {
+  .cart {
+    width: 14rem;
+    height: 20rem;
+    flex-direction: column;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+}

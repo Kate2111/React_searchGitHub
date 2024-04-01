@@ -1,4 +1,4 @@
 .title {
-  font-size: 2rem;
+  font-size: calc(var(--index) * 2);
   font-weight: 700;
 }

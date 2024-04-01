@@ -20,7 +20,6 @@ class GitStore {
       this.isLoading = true;
       const { items } = await getRepositoriesGitHub(searchQuery);
 
-      console.log(items);
       runInAction(() => {
         this.repositories = items;
         this.isLoading = false;

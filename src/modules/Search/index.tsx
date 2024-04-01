@@ -1,4 +1,3 @@
-import MyButton from "@components/UI/MyButton";
 import MyInput from "@components/UI/MyInput";
 import { FC, useEffect, useState } from "react";
 import style from "./index.module.scss";
@@ -7,7 +6,7 @@ import gitStore from "@store/gitStore";
 
 const Search: FC = () => {
   const { fetchReps } = gitStore;
-  const [value, setValue] = useState<string>("React_searchGitHub");
+  const [value, setValue] = useState<string>("");
   const debouncedSearchTerm = useDebounce(value, 500);
 
   useEffect(() => {
@@ -24,7 +23,6 @@ const Search: FC = () => {
           setValue(e.target.value);
         }}
       />
-      <MyButton>Копировать</MyButton>
     </div>
   );
 };
